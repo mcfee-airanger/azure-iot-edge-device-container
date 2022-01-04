@@ -29,11 +29,11 @@ RUN wget https://azurecliprod.blob.core.windows.net/install.py -O azure-cli-inst
 RUN cp /root/bin/az /usr/local/bin && \
     az extension add --name azure-iot
 
-RUN dpkg --add-architecture armhf && \
-    apt-get update -qq && apt-get install -qqy --allow-remove-essential \
-    iptables:armhf \
-    hostname:armhf \
-    libcurl3:armhf 
+#RUN dpkg --add-architecture armhf && \
+#    apt-get update -qq && apt-get install -qqy --allow-remove-essential \
+#    iptables:armhf \
+#    hostname:armhf \
+#    libcurl3:armhf 
 
 RUN wget http://ftp.us.debian.org/debian/pool/main/o/openssl1.0/libssl1.0.2_1.0.2r-1~deb9u1_armhf.deb && \
     dpkg -i libssl1.0.2_1.0.2r-1~deb9u1_armhf.deb
