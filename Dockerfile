@@ -27,7 +27,7 @@ RUN wget https://azurecliprod.blob.core.windows.net/install.py -O azure-cli-inst
     yes "" | ./azure-cli-install.py
 
 RUN cp /root/bin/az /usr/local/bin && \
-    az extension add --name azure-cli-iot-ext
+    az extension add --name azure-iot
 
 RUN dpkg --add-architecture armhf && \
     apt-get update -qq && apt-get install -qqy --allow-remove-essential \
