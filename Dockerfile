@@ -1,4 +1,5 @@
 #Notes: Requires setting the tag of image to: "mcr.microsoft.com/azureiotedge-agent:1.0.0-linux-arm32v7" in /etc/iotedge/config.yaml   
+#bump
 FROM aarch64/ubuntu:16.04
 
 RUN apt-get update -qq && apt-get install -qqy \
